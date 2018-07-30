@@ -2,5 +2,9 @@
   "python.pythonPath": "/Users/adam/.local/share/virtualenvs/tensorflow-stubs-qZojRkfN/bin/python",
   "python.envFile": "${workspaceFolder}/.env",
   "python.linting.flake8Enabled": true,
-  "python.linting.pylintEnabled": true
+  "python.linting.pylintEnabled": true,
+  "cSpell.words": [
+    "fname",
+    "mypy"
+  ]
 }

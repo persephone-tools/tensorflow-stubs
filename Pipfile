@@ -6,6 +6,10 @@ name = "pypi"
 [packages]
 pylint = "*"
 "flake8" = "*"
+"flake8-pyi" = "*"
+pytest = "*"
+mypy = "*"
+"autopep8" = "*"
 
 [dev-packages]
 
