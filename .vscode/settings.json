@@ -5,6 +5,7 @@
   "python.linting.pylintEnabled": true,
   "cSpell.words": [
     "fname",
+    "imag",
     "mypy"
   ]
 }
