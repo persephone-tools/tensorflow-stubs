@@ -16,7 +16,9 @@ extras = {
         'pytest',
         'mypy',
         'pylint',
-        'flake8'
+        'flake8',
+        'flake8-pyi',
+        'autopep8'
     ]
 }
 
