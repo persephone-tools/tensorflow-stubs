@@ -11,6 +11,15 @@ def find_stubs(package):
     return {package: stubs}
 
 
+extras = {
+    'dev': [
+        'pytest',
+        'mypy',
+        'pylint',
+        'flake8'
+    ]
+}
+
 setup(
     name="tensorflow-stubs",
     description="PEP 561 type stubs for tensorflow",
@@ -20,5 +29,6 @@ setup(
     packages=["tensorflow-stubs"],
     # PEP 561 requires these
     install_requires=["tensorflow"],
+    extras_requires=extras,
     package_data=find_stubs("tensorflow-stubs"),
 )
