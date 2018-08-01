@@ -109,23 +109,27 @@ class BaseSession:
     # list of graph elements if fetches is a list of single graph elements OR
     # a dictionary
     # Leaving it as Any for now
-    def run(self, fetches: Any, feed_dict: Optional[Dict[Any, Any]] = None,
-            run_options: Any = None, run_metadata: Any = None) -> Any: ...
+    def run(self, fetches: Any,
+            feed_dict: Optional[Dict[Any, Any]]=...,
+            run_options: Any=...,
+            run_metadata: Any=...
+            ) -> Any: ...
 
     def close(self) -> None: ...
 
 
 class Session(BaseSession):
     def __init__(self,
-                 graph: Graph = None,
-                 config: ConfigProto = None) -> None:
-        pass
+                 graph: Graph=...,
+                 config: ConfigProto=...
+                 ) -> None:
+        ...
 
     def __enter__(self):
-        pass
+        ...
 
     def __exit__(self, type, value, traceback):
-        pass
+        ...
 
     def close(self) -> None: ...
 
@@ -135,17 +139,18 @@ class Session(BaseSession):
 
 class Variable:
     def __init__(self,
-                 initial_value: Any=None,
-                 trainable: Optional[bool]=True,
-                 collections: Optional[Any]=None,
-                 validate_shape: Optional[bool]=True,
-                 caching_device: Optional[Any]=None,
-                 name: Optional[str]=None,
-                 variable_def: Optional[Any]=None,
-                 dtype: Optional[Any]=None,
-                 expected_shape: Optional[Any]=None,
-                 import_scope: Optional[str]=None,
-                 constraint: Optional[Any]=None) -> None: ...
+                 initial_value: Any=...,
+                 trainable: Optional[bool]=...,
+                 collections: Optional[Any]=...,
+                 validate_shape: Optional[bool]=...,
+                 caching_device: Optional[Any]=...,
+                 name: Optional[str]=...,
+                 variable_def: Optional[Any]=...,
+                 dtype: Optional[Any]=...,
+                 expected_shape: Optional[Any]=...,
+                 import_scope: Optional[str]=...,
+                 constraint: Optional[Any]=...
+                 ) -> None: ...
 
 
 # Original function definition for edit_distance here:
@@ -153,8 +158,8 @@ class Variable:
 # return type is Tensor
 def edit_distance(hypothesis: Any,
                   truth: Any,
-                  normalize: Optional[bool]=True,
-                  name: Optional[str]="edit_distance"
+                  normalize: Optional[bool]=...,
+                  name: Optional[str]=...
                   ) -> Any: ...
 
 # Original function definition for global_variables_initializer here:
@@ -173,16 +178,20 @@ def reset_default_graph() -> Graph: ...
 # Original function definition for placeholder here:
 # https://github.com/tensorflow/tensorflow/blob/28340a4b12e286fe14bb7ac08aebe325c3e150b4/tensorflow/python/ops/array_ops.py#L1693
 # TODO: improve types
-def placeholder(dtype: Any, shape: Any = None,
-                name: Optional[str] = None) -> Any: ...
+def placeholder(dtype: Any,
+                shape: Any=...,
+                name: Optional[str]=...
+                ) -> Any: ...
 
 # Original function definition for sparse_placeholder here:
 # https://github.com/tensorflow/tensorflow/blob/28340a4b12e286fe14bb7ac08aebe325c3e150b4/tensorflow/python/ops/array_ops.py#L1749
 # TODO: improve types
 
 
-def sparse_placeholder(dtype: Any, shape: Any = None,
-                       name: Optional[str] = None) -> Any: ...
+def sparse_placeholder(dtype: Any,
+                       shape: Any=...,
+                       name: Optional[str]=...
+                       ) -> Any: ...
 
 # Original function definition for sparse_tensor_to_dense here:
 # https://github.com/tensorflow/tensorflow/blob/d8f9538ab48e3c677aaf532769d29bc29a05b76e/tensorflow/python/ops/sparse_ops.py#L948
@@ -191,9 +200,9 @@ def sparse_placeholder(dtype: Any, shape: Any = None,
 
 
 def sparse_tensor_to_dense(sp_input: Any,
-                           default_value: Any=0,
-                           validate_indices: bool=True,
-                           name: Optional[str]=None
+                           default_value: Any=...,
+                           validate_indices: bool=...,
+                           name: Optional[str]=...
                            ) -> Any: ...
 
 # Original function definition for shape here:
@@ -204,19 +213,21 @@ def sparse_tensor_to_dense(sp_input: Any,
 # returns a `Tensor` of type specified by `out_type`
 
 
-def shape(input: Any, name: Optional[str]
-          = None, out_type: Any = None) -> Any: ...
+def shape(input: Any,
+          name: Optional[str]=...,
+          out_type: Any=...
+          ) -> Any: ...
 
 # Original function definition for truncated_normal here:
 # https://github.com/tensorflow/tensorflow/blob/70cd9ed2d2ea37a6da6f813a99b32c03e90736a4/tensorflow/python/ops/random_ops.py#L139
 
 
 def truncated_normal(shape: Any,
-                     mean: Any=0.0,
-                     stddev: Any=1.0,
+                     mean: Any=...,  # default 0.0
+                     stddev: Any=...,  # default 1.0
                      dtype: Any=dtypes.float32,
-                     seed: Any=None,
-                     name: Optional[str]=None
+                     seed: Any=...,
+                     name: Optional[str]=...
                      ) -> Any: ...
 
 # Original function definition for reduce_mean here:
@@ -225,9 +236,9 @@ def truncated_normal(shape: Any,
 
 
 def reduce_mean(input_tensor: Any,
-                axis: Any=None,
-                keepdims: Any=None,
-                name: Optional[str]=None,
-                reduction_indices: Any=None,
-                keep_dims: Any=None
+                axis: Any=...,
+                keepdims: Any=...,
+                name: Optional[str]=...,
+                reduction_indices: Any=...,
+                keep_dims: Any=...
                 ) -> Any: ...
