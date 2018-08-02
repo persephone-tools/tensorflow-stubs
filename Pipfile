@@ -11,6 +11,7 @@ pytest = "*"
 mypy = "*"
 "autopep8" = "*"
 tensorflow = "*"
+tensorflow-stubs = {editable = true, path = "."}
 
 [dev-packages]
 
