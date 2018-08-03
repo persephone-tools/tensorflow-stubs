@@ -38,10 +38,10 @@ pip install .
 Note that due to how mypy reads type information in PEP 561 packages, you'll 
 need to re-run the `pip install .` command each time you change the stubs.
 
-We use `py.test` to orchestrate our tests. You can just run:
+We use `pytest` to orchestrate our tests. You can just run:
 
 ```
-py.test
+pytest
 ```
 
 to run the entire test suite. To run `mypy` on a specific file (which
