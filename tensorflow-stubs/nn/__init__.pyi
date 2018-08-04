@@ -12,8 +12,8 @@ def ctc_beam_search_decoder(inputs: Any,
     ...
 
 
-def bidirectional_dynamic_rnn(cell_fw: Any,
-                              cell_bw: Any,
+def bidirectional_dynamic_rnn(cell_fw: 'RNNCell',
+                              cell_bw: 'RNNCell',
                               inputs: Any,
                               sequence_length: Any=...,
                               initial_state_fw: Any=...,
@@ -31,7 +31,7 @@ def bidirectional_dynamic_rnn(cell_fw: Any,
     ...
 
 
-def ctc_loss(labels: Any,
+def ctc_loss(labels: 'SparseTensor',
              inputs: Any,
              sequence_length: Any,
              preprocess_collapse_repeated: bool=...,
