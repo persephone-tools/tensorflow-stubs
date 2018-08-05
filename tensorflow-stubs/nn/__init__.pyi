@@ -2,7 +2,7 @@ from typing import Any, Optional, Tuple
 
 
 def ctc_beam_search_decoder(inputs: Any,
-                            sequence_length: Any,
+                            sequence_length: [int],
                             beam_width: int=...,
                             top_paths: int=...,
                             merge_repeated: bool=...
