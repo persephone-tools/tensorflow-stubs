@@ -4,7 +4,7 @@ python: 3.6
 notifications:
   email: false
 
-install: "Make"
+install: "make"
 
 script:
-	- make test
+  - make test
