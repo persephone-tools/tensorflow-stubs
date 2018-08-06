@@ -4,15 +4,15 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pylint = "*"
-"flake8" = "*"
-"flake8-pyi" = "*"
-pytest = "*"
-mypy = "*"
-"autopep8" = "*"
 tensorflow = "*"
 
 [dev-packages]
+pylint = "*"
+flake8 = "*"
+flake8-pyi = "*"
+pytest = "*"
+mypy = "*"
+autopep8 = "*"
 
 [requires]
 python_version = "3.6"
