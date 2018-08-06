@@ -59,3 +59,10 @@ python -m pip install .
 python -m pytest
 python -m mypy <file_path>
 ```
+
+To execute tests in a docker container use the following:
+
+```
+docker build . -t tf-stubs-docker-tests
+docker run tf-stubs-docker-tests
+```
