@@ -3,9 +3,9 @@ import tensorflow as tf
 # setup for ctc_beam_search_decoder
 placeholder = tf.placeholder(tf.float32, shape=(100, 256, 10))
 # TODO: pytest gives error "module has no attribute "SparseTensor"
-# sparseTensor = tf.SparseTensor(indices=[[0, 0], [1, 2]],
-#                                values=[1, 2],
-#                                dense_shape=[3, 4])
+sparseTensor = tf.SparseTensor(indices=[[0, 0], [1, 2]],
+                               values=[1, 2],
+                               dense_shape=[3, 4])
 
 tf.nn.ctc_beam_search_decoder(
     placeholder,
