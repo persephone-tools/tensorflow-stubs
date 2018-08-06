@@ -2,9 +2,9 @@ language: python
 python: 3.6
 
 notifications:
-	email: false
+  email: false
 
 install: "make"
 
 script:
-	- make test
+  - make test
