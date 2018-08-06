@@ -39,7 +39,7 @@ need to re-run the `pip install .` command each time you change the stubs.
 We use `py.test` to orchestrate our tests. You can just run:
 
 ```
-py.test
+pytest
 ```
 
 to run the entire test suite. To run `mypy` on a specific file (which
