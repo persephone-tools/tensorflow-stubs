@@ -10,7 +10,7 @@ FAIL_DIR = os.path.join(TESTS_DIR, "fail")
 REVEAL_DIR = os.path.join(TESTS_DIR, "reveal")
 
 
-def get_test_cases(directory):
+def get_test_cases(directory: str):
     for root, __, files in os.walk(directory):
         for fname in files:
             if os.path.splitext(fname)[-1] == ".py":
@@ -87,4 +87,3 @@ def test_reveal(path, py2_arg):
         assert "Revealed type is" in error_line
         marker = lines[lineno - 1].split("# E:")[-1].strip()
         assert marker in error_line
-
