@@ -5,8 +5,8 @@ notifications:
   email: false
 
 install:
-- pip install -r test_requirements.txt
-- pip install .
+  - pip install pipenv
+  - pipenv install --dev --skip-lock
 
 script:
-- pytest
+  - pipenv run pytest
