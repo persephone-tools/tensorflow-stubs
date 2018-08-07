@@ -13,7 +13,7 @@ main repository on GitHub, clone, and develop on a branch. Steps:
 
    ```bash
    $ git clone git@github.com:Your-Username/tensorflow-stubs.git
-   $ cd persephone
+   $ cd tensorflow-stubs
    ```
 
 3. Create a ``feature`` or ``bugfix`` or ``types`` branch to hold your development changes:
