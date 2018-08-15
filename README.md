@@ -11,3 +11,17 @@ annotations from outside the tensorflow library as tensorflow currently does not
 type annotations.
 
 Please note: *This is very much a work in progress*, pull requests are very welcome!
+
+## Vague roadmap
+
+* Build tests using working/verified production code that will enable us more confidence in building our type stubs
+* Create stubs for all tensorflow functions, even if these have types that are too generic such as `Any`. We can then create issues when such code is found and make changes to specify the types.
+* Make more specific typing with an aim of getting good coverage of all the most important parts (for example the `Tensor` class and any other foundational components)
+
+## Contributors
+
+
+Tensorflow stubs has been built based on the code contributions of:
+
+* [Janis Lesinskis](https://www.customprogrammingsolutions.com/about/janis-lesinskis)
+* [acvander](https://github.com/acvander)
