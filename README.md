@@ -25,3 +25,4 @@ Tensorflow stubs has been built based on the code contributions of:
 
 * [Janis Lesinskis](https://www.customprogrammingsolutions.com/about/janis-lesinskis)
 * [acvander](https://github.com/acvander)
+* [Aapeli Vuorinen](https://www.customprogrammingsolutions.com/about/aapeli-vuorinen)
