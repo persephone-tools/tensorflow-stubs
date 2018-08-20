@@ -86,7 +86,7 @@ class SparseTensor:
     def __init__(self, indices: Any,
                  values: Any,
                  dense_shape: Any,
-                 ) -> Any: ...
+                 ) -> None: ...
 
 
 class gpu_options:
