@@ -82,6 +82,13 @@ class Tensor:
     pass
 
 
+class SparseTensor:
+    def __init__(self, indices: Any,
+                 values: Any,
+                 dense_shape: Any,
+                 ) -> Any: ...
+
+
 class gpu_options:
     def __init__(self):
         self.allow_growth: bool
